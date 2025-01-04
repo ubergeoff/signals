@@ -1,0 +1,68 @@
+:host {
+    height: calc(100vh);
+    display: flex;
+}
+
+.content-background {
+    background-image: url('/assets/images/background.jpg');
+
+    /* Background image is centered vertically and horizontally at all times */
+    /*background-position: center center;
+
+    !* Background image doesn't tile *!
+    background-repeat: no-repeat;
+
+    !* Background image is fixed in the viewport so that it doesn't move when
+    the content's height is greater than the image's height *!
+    background-attachment: fixed;*/
+
+    /* This is what makes the background image rescale based
+    on the container's size */
+    background-size: cover;
+
+    /* Set a background color that will be displayed
+    while the background image is loading */
+    background-color: #464646;
+}
+
+.outer-form {
+    width: 100%;
+    margin-top: 150px;
+    padding: 16px;
+}
+
+.error-content {
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 0 0 16px 0;
+}
+
+.input-form {
+    max-width: 500px;
+    min-width: 300px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 24px;
+    background: #f0f2f5;
+    border-radius: 16px;
+}
+
+.all-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pad-10 {
+    padding: 10px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}

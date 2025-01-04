@@ -1,0 +1,25 @@
+<nz-layout>
+    <nz-content class="content-background">
+        <div class="inner-content">
+            <div class="outer-form">
+                <div class="error-content">
+                    <nz-alert
+                        *ngIf="auth.currentStatus() === 'error'"
+                        nzType="error"
+                        nzMessage="Error"
+                        [nzDescription]="auth.currentMessage()"
+                        nzCloseText="Close"
+                        nzShowIcon
+                    ></nz-alert>
+                </div>
+
+                <div class="input-form">
+                    <nz-spin [nzSpinning]="auth.currentStatus() === 'loading'">
+                        <flights-login-form></flights-login-form>
+                    </nz-spin>
+                </div>
+            </div>
+        </div>
+    </nz-content>
+    <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+</nz-layout>

@@ -1,0 +1,26 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "module": "esnext",
+        "lib": ["es2020", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@flights/auth": ["libs/auth/src/index.ts"],
+            "@flights/cart": ["libs/cart/src/index.ts"],
+            "@flights/common": ["libs/common/src/index.ts"],
+            "@flights/login": ["libs/login/src/index.ts"],
+            "@flights/signal-store": ["libs/signal-store/src/index.ts"],
+            "@flights/utils": ["libs/utils/src/index.ts"]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
+}

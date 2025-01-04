@@ -1,0 +1,37 @@
+<h1>Cart</h1>
+
+<div></div>
+
+<br />
+<div>
+    <button (click)="addProduct()">Add Product</button>
+</div>
+<br />
+<div *ngIf="cartItems().length > 0">
+    Subtotal: <b> {{ subTotal() | currency }}</b>
+    <br />
+    Delivery Fee:
+    {{ deliveryFee() === 0 ? 'Free' : (deliveryFee() | currency) }}
+    <br />
+    Tax:
+    <b> {{ totalTax() | currency }}</b>
+    <br />
+    Total:
+    <b> {{ fullTotal() | currency }}</b>
+</div>
+<br />
+<div>
+    <ul>
+        <li *ngFor="let item of cartItems()">
+            {{ item.product.name }} &nbsp;&nbsp;
+            {{ item.product.price | currency }}
+            &nbsp;&nbsp;
+            <select (change)="updateQuantity($event.target, item.product.id)">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            &nbsp;&nbsp;
+            <button (click)="removeProduct(item.product.id)">REMOVE</button>
+        </li>
+    </ul>
+</div>
